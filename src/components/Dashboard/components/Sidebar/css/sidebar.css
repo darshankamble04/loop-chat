@@ -1,0 +1,106 @@
+.dashboard {
+  background-color: var(--main-bg-color);
+  max-width: 1350px;
+  width: 100%;
+  height: 95vh;
+  padding: 0;
+}
+
+.fullScreenToggleBtn{
+  width: 30px;
+  height: 40px;
+  top: 0;
+  right: 12px;
+  z-index: 3;
+}
+
+.sidebar {
+  background-color: var(--main-bg-color);
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--main-border-color);
+
+}
+
+.sidebarTop {
+  background: var(--secondary-color);
+  /* border-bottom: 3px solid #232323; */
+  color: #fff;
+}
+
+.sidebarTop .cdropdown-menu  {
+  background: var(--main-bg-color) !important;
+  border: 2px solid #232323;
+  color: #fff;
+}
+.sidebarTop .cdropdown-menu * {
+  background: var(--main-bg-color) !important;
+  color: #fff;
+}
+
+.sidebarTop .muIcon{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sidebarTop .muIcon:hover{
+  background: rgb(80 80 80);
+}
+
+.sidebarTop .username {
+  transition: 0.2s ease-in-out;
+}
+
+.sidebarTop .username:hover {
+  text-decoration: underline;
+}
+
+.sidebarTop .tabs {
+  height: 40px;
+  color: #fff;
+}
+
+.sidebarTop .tabs .tab {
+  padding-top: 5px;
+color: hsl(0deg 0% 55%);
+  height: 100%;
+  width: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 2px solid var(--main-border-color);
+}
+
+.sidebarTop .tabs .tab:hover {
+  background-color: rgba(65, 63, 63, 0.575);
+
+}
+
+.sidebarTop .tabs .selectedTab {
+  border-bottom: 3px solid rgb(255, 255, 255);
+  color: #fff;
+}
+
+.sidebarMid {
+  height: calc(100vh - 92px - 5vh);
+  overflow: auto !important;
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.sidebarBottom {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+color: #fff;
+  border-radius: 139px;
+  background: var(--secondary-color);
+  box-shadow: 20px 20px 60px #171717, -20px -20px 60px #1f1f1f;
+  border: 2px solid var(--main-border-color);
+}

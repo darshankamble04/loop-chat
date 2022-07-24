@@ -1,0 +1,62 @@
+:root{
+    --main-bg-color:#000000;
+    --main-selected-task-color:#d7dae0;
+    --main-unselected-task-color:#56575a;
+    --main-border-color : #232323;
+    --secondary-color:#1b1b1b;
+
+}
+.c-pointer{
+    cursor: pointer !important;
+}
+.text-gray{
+    color: rgb(117, 117, 117);
+}
+
+.PAbsu{
+    position: absolute;
+}
+
+.PRel{
+    position: relative;
+}
+
+.d-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-vcenter{
+    display: flex;
+    justify-content: center;
+}
+
+.d-hcenter{
+    display: flex;
+    align-items: center;
+}
+
+.jc-round{
+    display: flex;
+    justify-content: space-around;
+}
+.jc-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+li,a{
+    text-decoration: none !important;
+}
+
+a{
+    color: #000;
+}
+a:hover{
+    color: #000;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}

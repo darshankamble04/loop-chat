@@ -1,0 +1,231 @@
+.chatScreen {
+  width: calc(100% - 400px);
+  position: relative;
+}
+
+.chatScreenHeader {
+  height: 61px;
+  background: var(--secondary-color);
+  color: #fff;
+  width: 100%;
+  border-bottom: 2px solid var(--main-border-color);
+}
+
+.chatScreenHeader .avatar > img {
+  width: 45px;
+  border-radius: 50%;
+  border: 2px solid rgb(170, 170, 170);
+}
+
+.chatScreenHeader .avatar {
+  width: 60px;
+  padding: 0 0.5rem;
+}
+
+.chatScreenHeader .option {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.chatScreenHeader .option:hover {
+  background: rgb(80, 80, 80);
+}
+
+.chats .msg {
+  /* padding: 0.1rem 2.9rem 0.1rem 0.7rem; */
+  width: max-content;
+  margin-top: 4px;
+  max-width: 77%;
+  border-radius: 0.8rem;
+  background: rgb(0, 0, 0);
+  position: relative;
+}
+
+.chats .msg .msgText {
+  padding: 0.1rem 2.9rem 0.1rem 0.7rem;
+}
+
+.chats .msgRight {
+  color: #a0a0a0;
+  border: 2px solid #a0a0a0;
+  float: right;
+}
+
+.chats .msgRight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;
+  /* background: rgb(148, 0, 0); */
+  width: 6px;
+  height: 20px;
+  border-left: 2px solid #a0a0a0;
+  border-top: 2px solid #a0a0a0;
+  border-top-left-radius: 0.4rem;
+}
+
+.chats .msgRight::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -4px;
+  width: 3px;
+  height: 20px;
+  border-left: 7px solid rgb(0 0 0);
+  border-top: 2px solid rgb(0 0 0);
+  border-top-left-radius: 0.4rem;
+}
+
+.chats .msgLeft {
+  color: #6d6d6d;
+  border: 2px solid #383838;
+  float: left;
+}
+
+.chats .msgLeft::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  /* background: rgb(148, 0, 0); */
+  width: 6px;
+  height: 20px;
+  border-right: 2px solid #383838;
+  border-top: 2px solid #383838;
+  border-top-right-radius: 0.4rem;
+}
+
+.chats .msgLeft::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  width: 3px;
+  height: 20px;
+  border-right: 7px solid rgb(0 0 0);
+  border-top: 2px solid rgb(0 0 0);
+  border-top-right-radius: 0.4rem;
+}
+
+.csBottom {
+  /* position: absolute;
+  bottom: 0; */
+  padding: 0.4rem 0.8rem;
+  /* border: 0.5px solid gray; */
+  width: 100%;
+  color: #a0a0a0;
+}
+
+.csBottom > input {
+  color: #a0a0a0;
+  padding: 0.4rem 0.8rem;
+  outline: none;
+  border-radius: 25px;
+  border: 0.5px solid #a0a0a0;
+  border: none;
+  width: 90%;
+  background-color: var(--secondary-color);
+}
+
+.csBottom > button {
+  border-radius: 50%;
+  border: none;
+  padding: 0.3rem;
+}
+
+.chats {
+  height: calc(100vh - 61px - 51.45px - 5vh);
+  overflow: auto;
+  padding: 1rem;
+  position: relative;
+}
+.chats .space {
+  min-width: 10px !important;
+}
+
+.chats .msgTime {
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  font-size: 0.69rem;
+}
+
+.viewArrow {
+  display: none !important;
+}
+
+.idNameBox {
+  font-size: 0.7rem;
+  width: 100%;
+  color: #6d6d6d;
+  background-color: #3838387e;
+  background: linear-gradient(
+    181deg,
+    rgb(72 69 69 / 94%) 0%,
+    rgba(0, 0, 0, 0.3733031674208145) 65%
+  );
+  border-radius: 0.6rem 0.6rem 0rem 0rem;
+  padding: 0.2rem 0.6rem 0 0.6rem;
+}
+.setd{
+  display: none !important;
+}
+
+@media screen and (max-width: 824px) {
+  .setd{
+    display: flex !important;
+  }
+  .d-invisible {
+    display: none !important;
+  }
+  .chatScreen {
+    width: 90%;
+  }
+  .dashboard {
+    justify-content: center;
+  }
+  .sidebar {
+    width: 90vw !important;
+  }
+  .viewArrow {
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .chatScreen {
+    width: 100%;
+    height: 100vh;
+  }
+  .sidebar {
+    width: 100vw !important;
+  }
+  .dashboard {
+    height: 100vh !important;
+    margin: 0 !important;
+  }
+
+  .profile .avatar > img {
+    border: 2px solid var(--main-border-color);
+    width: 100%;
+  }
+  .chats {
+    height: calc(100vh - 61px - 51.45px);
+  }
+  .sidebarMid {
+    height: calc(100vh - 92px);
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .loginOutline {
+    width: 100% !important;
+    margin: 0 1rem !important;
+  }
+  .loginInline {
+    width: 100% !important;
+  }
+}
