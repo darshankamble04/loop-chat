@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useContext } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import SendTwoToneIcon from '@material-ui/icons/SendTwoTone';
 import DataContext from '../../../../context/DataContext';
 import db from '../../../../Firebase';
@@ -21,7 +21,7 @@ export default function ChatScreen() {
         timestamp: new Date()
       })
     })
-    msgRef.current.value ="";
+    msgRef.current.value = "";
     setMsgValue("")
   }
 
@@ -30,6 +30,11 @@ export default function ChatScreen() {
       node.scrollIntoView({ smooth: true })
     }
   }, [])
+
+  const dragStart = (e) => {
+    console.log("dragStart", e.clientY);
+  }
+
   const [msgValue, setMsgValue] = useState("")
   return (
     <>
@@ -90,19 +95,33 @@ export default function ChatScreen() {
                     </div>
                   }
                   else {
-                    return <div ref={lastMessage ? setRef : null} >
-                      <div className="msgLeft msg mx-2">
-                      <div className={`${chatInfo.tab !== "group" && "d-none"} idNameBox d-flex jc-between`}>
-                          <div className="space"></div>
-                          <div>~
-                            {msg.sender === IsInContact(msg.sender, allContacts) ? ` @${msg.sender}` : ` ${IsInContact(msg.sender, allContacts)}`}
+
+
+
+                    return <div className='msgContainer' ref={lastMessage ? setRef : null} >
+                        <div
+                          onDoubleClick={(e)=>{console.log("Double Click",e)}}
+
+                          // onDragStart={dragStart}
+                          // draggable={true}
+                          className="msgLeft msg mx-2"
+                        >
+
+                          <div className={`${chatInfo.tab !== "group" && "d-none"} idNameBox d-flex jc-between`}>
+                            <div className="space"></div>
+                            <div>~
+                              {msg.sender === IsInContact(msg.sender, allContacts) ? ` @${msg.sender}` : ` ${IsInContact(msg.sender, allContacts)}`}
+                            </div>
                           </div>
-                        </div>
-                        <div className="msgText">{msg.text}</div>
-                        <div className="msgTime small">{hr}:{min}{" "}{meridiem}</div>
+                          <div className="msgText">{msg.text}</div>
+                          <div className="msgTime small">{hr}:{min}{" "}{meridiem}</div>
                       </div>
+
                     </div>
                   }
+
+
+
                 })
               }
             </div>
@@ -112,7 +131,7 @@ export default function ChatScreen() {
             {/* <div className="emoji">🙂</div> */}
             <input onChange={(e) => { setMsgValue(e.target.value) }} style={{ maxHeight: "350px", overflow: "auto" }} ref={msgRef} className='mx-2' placeholder='Message' type="text" />
 
-            <button disabled={msgValue.length === 0 } type='submit'><SendTwoToneIcon /></button>
+            <button disabled={msgValue.length === 0} type='submit'><SendTwoToneIcon /></button>
           </form>
         </div>
       }

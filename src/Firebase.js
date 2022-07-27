@@ -3,13 +3,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBvB3XcR0ezZ4DsakovxcvREemKMqh6k3k",
-  authDomain: "chat-loop04.firebaseapp.com",
-  projectId: "chat-loop04",
-  storageBucket: "chat-loop04.appspot.com",
-  messagingSenderId: "706059685722",
-  appId: "1:706059685722:web:f06493c19e76a76c09ed63",
-  measurementId: "G-8SLHMTMQ62"
+  apiKey: "AIzaSyBhA2VFNEvQyDvUSB9BpqemLBvF25yh-yE",
+  authDomain: "loop-chat-darshankamble.firebaseapp.com",
+  projectId: "loop-chat-darshankamble",
+  storageBucket: "loop-chat-darshankamble.appspot.com",
+  messagingSenderId: "604284297524",
+  appId: "1:604284297524:web:82e31db23ffe38a18f4561",
+  measurementId: "G-BJTXM7TC6W"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)

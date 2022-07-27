@@ -79,10 +79,25 @@
   border-top-left-radius: 0.4rem;
 }
 
+
+
+.chats .msgContainer {
+  /* width: 100%; */
+ 
+}
+
+.chats .msgInnerContainer {
+ width: 100px;
+}
 .chats .msgLeft {
   color: #6d6d6d;
   border: 2px solid #383838;
   float: left;
+  position: relative;
+}
+
+.chats .msgLeft {
+
 }
 
 .chats .msgLeft::after {
