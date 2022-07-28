@@ -44,7 +44,7 @@ export default function AddChat({ setActiveTab, display, setDisplay }) {
           // eslint-disable-next-line 
           allContacts && allContacts.map((contact) => {
             if (contact) {
-              return <ConversationTitle avatarUrl="" setDisplay={setDisplay} title={contact.name} lastActivity={`${contact.id}`} />
+              return <ConversationTitle avatarUrl="" key={contact.id} setDisplay={setDisplay} title={contact.name} lastActivity={`${contact.id}`} />
             }
           })
         }

@@ -47,22 +47,22 @@ export default function NewContact() {
 
     }
     return (
-        <div class="modal fade" id="newContact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered ">
-                <form onSubmit={handleSubmit} class="cModel modal-content">
-                    <div class="modal-header modal_header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Create Contact</h5>
+        <div className="modal fade" id="newContact" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered ">
+                <form onSubmit={handleSubmit} className="cModel modal-content">
+                    <div className="modal-header modal_header">
+                        <h5 className="modal-title" id="staticBackdropLabel">Create Contact</h5>
                         <CloseIcon onClick={()=>{closeRef.current.click()}} className='closeBtn' />
-                        <button  ref={closeRef} type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button  ref={closeRef} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                         <div className='mt-4'>
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">User Id</label>
-                                <div class="col-sm-10">
+                            <div className="row mb-3">
+                                <label className="col-sm-2 col-form-label">User Id</label>
+                                <div className="col-sm-10">
                                     <div className="input-group col-sm-10">
 
-                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                    <span className="input-group-text" id="validationTooltipUsernamePrepend">@</span>
 
                                         <input onKeyPress={()=>{idRef.current.click()}}  onChange={handleChange} ref={idRef} type="text" required className={`form-control ${isValid && "is-valid"} ${isInValid && "is-invalid"}`} id="validationServer07" />
 
@@ -74,16 +74,16 @@ export default function NewContact() {
 
                                 </div>
                             </div>
-                            <div class="input-group row mb-3">
-                                <label class="col-sm-2 col-form-label">Name</label>
-                                <div class="col-sm-10">
-                                    <input ref={nameRef} type="text" required class="form-control" id="inputPassword9" />
+                            <div className="input-group row mb-3">
+                                <label className="col-sm-2 col-form-label">Name</label>
+                                <div className="col-sm-10">
+                                    <input ref={nameRef} type="text" required className="form-control" id="inputPassword9" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer modal_footer">
-                        <button type="submit" disabled={!isValid} class="btn btn-primary">Create</button>
+                    <div className="modal-footer modal_footer">
+                        <button type="submit" disabled={!isValid} className="btn btn-primary">Create</button>
                     </div>
                 </form>
             </div>

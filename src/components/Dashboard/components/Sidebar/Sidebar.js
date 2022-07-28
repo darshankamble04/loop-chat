@@ -54,11 +54,11 @@ const [flag, setFlag] = useState(false)
               <div onClick={handleClick} className="mx-1 setd d-center muIcon searchIcon">{!flag?<FullscreenIcon/>:<FullscreenExitIcon/>}</div>
               <div className="mx-1 d-center muIcon searchIcon"><SearchIcon /></div>
               <div className="mx-1 d-center muIcon settingIcon">
-                <div class="dropdown">
+                <div className="dropdown">
                   <MoreVertIcon id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" />
-                  <ul class="dropdown-menu cdropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" onClick={() => { setViewMyProfile(true) }} type="button">My Profile</button></li>
-                    <li><button class="dropdown-item" onClick={() => { setMY_USERID(""); window.localStorage.removeItem("Chat-loop-Id") }} type="button">Logout <ExitToAppIcon className='mx-2' /></button></li>
+                  <ul className="dropdown-menu cdropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button className="dropdown-item" onClick={() => { setViewMyProfile(true) }} type="button">My Profile</button></li>
+                    <li><button className="dropdown-item" onClick={() => { setMY_USERID(""); window.localStorage.removeItem("Chat-loop-Id") }} type="button">Logout <ExitToAppIcon className='mx-2' /></button></li>
                   </ul>
                 </div>
               </div>

@@ -35,6 +35,12 @@
     border: 2px solid var(--main-border-color);
     outline: none;
 }
+.profile .form-control{
+    color: #a0a0a0;
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--main-border-color);
+    outline: none;
+}
 .profile input:focus{
     color: #a0a0a0;
     background-color: var(--main-bg-color);

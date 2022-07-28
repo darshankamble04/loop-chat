@@ -31,10 +31,6 @@ export default function ChatScreen() {
     }
   }, [])
 
-  const dragStart = (e) => {
-    console.log("dragStart", e.clientY);
-  }
-
   const [msgValue, setMsgValue] = useState("")
   return (
     <>
@@ -78,7 +74,7 @@ export default function ChatScreen() {
                   let min = date.getMinutes()
                   const lastMessage = chatInfo.messages.length - 1 === i
                   if (msg.sender === MY_USERID) {
-                    return <div ref={lastMessage ? setRef : null} >
+                    return <div key={msg.timestamp} ref={lastMessage ? setRef : null} >
                       <div draggable={true} className="msgRight msg mx-2">
 
                         <div className={`${chatInfo.tab !== "group" && "d-none"} idNameBox d-flex jc-between`}>
@@ -98,12 +94,8 @@ export default function ChatScreen() {
 
 
 
-                    return <div className='msgContainer' ref={lastMessage ? setRef : null} >
+                    return <div key={msg.timestamp} className='msgContainer' ref={lastMessage ? setRef : null} >
                         <div
-                          onDoubleClick={(e)=>{console.log("Double Click",e)}}
-
-                          // onDragStart={dragStart}
-                          // draggable={true}
                           className="msgLeft msg mx-2"
                         >
 

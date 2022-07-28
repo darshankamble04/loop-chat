@@ -27,30 +27,27 @@ export default function MyProfile({ viewMyProfile, setViewMyProfile }) {
 
                     </div>
 
-                    <div class="mx-4 row g-3" novalidate>
-                        <div class=" position-relative">
-                            <label for="validationTooltipUsername" class="form-label">User id</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                                <input value={MY_USERID} type="text" disabled class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required />
+                    <div className="mx-4 row g-3">
+                        <div className=" position-relative">
+                            <label htmlFor="validationTooltipUsername" className="form-label">User id</label>
+                            <div className="input-group has-validation">
+                                <span className="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                <div className="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" >{MY_USERID}</div>
                             </div>
                         </div>
 
-                        <div class=" position-relative">
-                            <label for="validationTooltip01" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="validationTooltip01" value={userProfile.map(e => { return e.name }).slice(0,-1)} required />
-                            <div class="valid-tooltip">
-                                Please provide a valid name.
-                            </div>
+                        <div className=" position-relative">
+                            <label htmlFor="validationTooltip01" className="form-label">Name</label>
+                            <div className="form-control" id="validationTooltip"  >{userProfile.map(e => { return e.name }).slice(0,-1)}</div>
                         </div>
 
-                        <div class="col-md-6 position-relative">
-                            <label for="validationTooltip03" class="form-label">About Me</label>
-                            <input value={userProfile.map(e => { return e.about }).slice(0,-1)} type="text" class="form-control" id="validationTooltip03" required />
-                            <div class="invalid-tooltip">
+                        {/* <div className="d-none col-md-6 position-relative">
+                            <label htmlFor="validationTooltip03" className="form-label">About Me</label>
+                            <input value={userProfile.map(e => { return e.about }).slice(0,-1)} type="text" className="form-control" id="validationTooltip03" required />
+                            <div className="invalid-tooltip">
                                 Please provide a valid about.
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

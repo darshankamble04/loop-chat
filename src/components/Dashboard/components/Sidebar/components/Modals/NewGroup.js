@@ -46,25 +46,25 @@ export default function NewGroup({ setActiveTab, setDisplay }) {
         }))
     }
     return (
-        <div class="modal fade" id="newGroup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
-                <form onSubmit={handleSubmit} class="cModel modal-content">
-                    <div class="modal-header modal_header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Create Group</h5>
+        <div className="modal fade" id="newGroup" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
+                <form onSubmit={handleSubmit} className="cModel modal-content">
+                    <div className="modal-header modal_header">
+                        <h5 className="modal-title" id="staticBackdropLabel">Create Group</h5>
                         <CloseIcon onClick={() => { closeRef.current.click() }} className='closeBtn' />
-                        <button ref={closeRef} type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button ref={closeRef} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                         <div className="d-flex flex-column">
-                            <div class="row mb-3 mx-3">
-                                <label class="col-sm-2 col-form-label">Name</label>
-                                <div class="col-sm-10">
-                                    <input ref={grNameRef} type="text" required class="form-control" id="inputPassword3" />
+                            <div className="row mb-3 mx-3">
+                                <label className="col-sm-2 col-form-label">Name</label>
+                                <div className="col-sm-10">
+                                    <input ref={grNameRef} type="text" required className="form-control" id="inputPassword3" />
                                 </div>
                             </div>
                             {
                                 allContacts.map(contact => {
-                                    return <div className="d-hcenter jc-between">
+                                    return <div key={contact.id} className="d-hcenter jc-between">
                                         <input
                                             className='costomCheckbox'
                                             type="checkbox"
@@ -94,9 +94,9 @@ export default function NewGroup({ setActiveTab, setDisplay }) {
                             }
                         </div>
                     </div>
-                    <div class="modal-footer modal_footer">
-                        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal ">Close</button> */}
-                        <button disabled={selectedContactIds.length < 3} type="submit" class="btn btn-primary">Create</button>
+                    <div className="modal-footer modal_footer">
+                        {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal ">Close</button> */}
+                        <button disabled={selectedContactIds.length < 3} type="submit" className="btn btn-primary">Create</button>
                     </div>
                 </form>
             </div>
