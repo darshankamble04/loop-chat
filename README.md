@@ -1,3 +1,3 @@
 # loop-chat
 
-deployed url :- https://loop-chat-darshankamble.web.app/
+Deployed url :- https://loop-chat-darshankamble.web.app/
