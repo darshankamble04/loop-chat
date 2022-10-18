@@ -45,7 +45,21 @@
 }
 
 .chats .msg .msgText {
+  margin: 0.1rem 2.9rem 0.1rem 0.7rem;
+    overflow: hidden;
+}
+
+.chats .msg .msgText >a {
+  color: #005e8a;
+}
+
+.chats .msg .customTextarea {
   padding: 0.1rem 2.9rem 0.1rem 0.7rem;
+  resize: none;
+  background-color: transparent;
+  color: #a0a0a0;
+  border: none;
+  width: auto;
 }
 
 .chats .msgRight {
@@ -134,7 +148,7 @@
   color: #a0a0a0;
 }
 
-.csBottom > input {
+.csBottom >input {
   color: #a0a0a0;
   padding: 0.4rem 0.8rem;
   outline: none;
@@ -143,6 +157,9 @@
   border: none;
   width: 90%;
   background-color: var(--secondary-color);
+  /*  */
+  /* resize: none;
+  height: 40px; */
 }
 
 .csBottom > button {

@@ -12,7 +12,7 @@ const DataState = ({ children }) => {
         })
 
     }
-    
+
     const [dNone, setDNone] = useState(false)
     const [allUser, setAllUser] = useState([])
     const getAllUsers = () => {

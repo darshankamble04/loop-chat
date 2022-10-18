@@ -12,4 +12,11 @@ root.render(
     </DataState>
   </React.StrictMode>
 );
+
+/*
+ to depploy
+ npm run build
+ firebase deploy
+ firebase serve
+*/
  

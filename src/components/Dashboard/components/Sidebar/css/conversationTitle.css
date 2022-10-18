@@ -6,6 +6,8 @@
     color: #fff;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
+    min-height: 66.76px;
 }
 
 .conversationTitle:hover{
@@ -37,6 +39,7 @@
 .conversationTitle .ctMid{
     width: calc(100% - 65px - 85px);
     /* background-color: rgb(22, 22, 22); */
+    overflow: hidden;
 }
 
 .conversationTitle .ctMid .ctLastActivity{
@@ -55,4 +58,7 @@
    height: 23px;
    border-radius: 50%;
     background-color: rgba(1, 128, 58, 0.521);
+}
+.conversationTitle .ctRight .ctLastSeenTime {
+    position: absolute;
 }
